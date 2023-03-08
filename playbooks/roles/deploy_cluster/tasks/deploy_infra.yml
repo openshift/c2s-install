@@ -24,7 +24,7 @@
     state: present
     disable_rollback: false
     create_timeout: 10
-    template: "{{ playbook_dir }}/../cloudformation/c2s/network.yaml"
+    template: "{{ playbook_dir }}/../cloudformation/network.yaml"
     template_parameters:
       ClusterName: "{{ ocp_cluster_name }}"
       InfrastructureName: "{{ infrastructure_id }}"

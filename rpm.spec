@@ -31,6 +31,7 @@ cluster in the AWS US ISO regions.
 %install
 install -d %{buildroot}%{_datadir}/%{name}
 install -m 644 requirements.txt %{buildroot}%{_datadir}/%{name}/requirements.txt
+install -m 644 requirements.yml %{buildroot}%{_datadir}/%{name}/requirements.yml
 install -m 644 README.md %{buildroot}%{_datadir}/%{name}/README.md
 install -m 644 LICENSE %{buildroot}%{_datadir}/%{name}/LICENSE
 #install -d %{buildroot}%{_datadir}/%{name}/docs
@@ -43,6 +44,7 @@ cp -r cloudformation %{buildroot}%{_datadir}/%{name}/cloudformation/
 %files
 %defattr(-,root,root)
 %{_datadir}/%{name}/requirements.txt
+%{_datadir}/%{name}/requirements.yml
 %doc %{_datadir}/%{name}/README.md
 %license %{_datadir}/%{name}/LICENSE
 %{_datadir}/%{name}/playbooks
@@ -51,3 +53,5 @@ cp -r cloudformation %{buildroot}%{_datadir}/%{name}/cloudformation/
 %changelog
 * Tue Dec 13 2022 Initial RPM Build
 - Initial example of spec.
+* Wed Mar 08 2023 Add ansible collections requirements file
+- Add ansible collections requirements file

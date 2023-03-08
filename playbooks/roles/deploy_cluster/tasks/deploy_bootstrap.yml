@@ -51,7 +51,7 @@
     state: present
     disable_rollback: true
     create_timeout: 5
-    template: "../cloudformation/c2s/bootstrap.yaml"
+    template: "../cloudformation/bootstrap.yaml"
     template_parameters:
       #ClusterName: "{{ ocp_cluster_name }}"
       InfrastructureName: "{{ infrastructure_id }}"

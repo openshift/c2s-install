@@ -46,7 +46,7 @@
     state: present
     disable_rollback: true
     create_timeout: 5
-    template: "../cloudformation/c2s/NGA/04_cluster_bootstrap.yaml"
+    template: "../cloudformation/bootstrap.yaml"
     template_parameters:
       ClusterName: "{{ ocp_cluster_name }}"
       InfrastructureName: "{{ infrastructure_id }}"
@@ -99,7 +99,7 @@
     state: present
     disable_rollback: true
     create_timeout: 5
-    template: "../cloudformation/c2s/NGA/"
+    template: "../cloudformation/control_plane.yaml"
     template_parameters:
       ClusterName: "{{ ocp_cluster_name }}"
       InfrastructureName: "{{ infrastructure_id }}"
@@ -159,7 +159,7 @@
     validate_certs: "{{ aws_ssl_enabled }}"
     disable_rollback: true
     create_timeout: 5
-    template: "../cloudformation/c2s/NGA/06_cluster_worker_node.yaml"
+    template: "../cloudformation/worker.yaml"
     template_parameters:
       ClusterName: "{{ ocp_cluster_name }}"
       InfrastructureName: "{{ infrastructure_id }}"
@@ -183,7 +183,7 @@
     validate_certs: "{{ aws_ssl_enabled }}"
     disable_rollback: true
     create_timeout: 5
-    template: "../cloudformation/c2s/NGA/06_cluster_worker_node.yaml"
+    template: "../cloudformation/worker.yaml"
     template_parameters:
       ClusterName: "{{ ocp_cluster_name }}"
       InfrastructureName: "{{ infrastructure_id }}"
@@ -207,7 +207,7 @@
     validate_certs: "{{ aws_ssl_enabled }}"
     disable_rollback: true
     create_timeout: 5
-    template: "../cloudformation/c2s/NGA/06_cluster_worker_node.yaml"
+    template: "../cloudformation/worker.yaml"
     template_parameters:
       ClusterName: "{{ ocp_cluster_name }}"
       InfrastructureName: "{{ infrastructure_id }}"

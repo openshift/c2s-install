@@ -30,7 +30,7 @@
     state: present
     disable_rollback: true
     create_timeout: 5
-    template: "{{ playbook_dir }}/../cloudformation/c2s/security.yaml"
+    template: "{{ playbook_dir }}/../cloudformation/security.yaml"
     template_parameters:
       InfrastructureName: "{{ infrastructure_id }}"
       VpcCidr: "{{ vpc_cidr }}"

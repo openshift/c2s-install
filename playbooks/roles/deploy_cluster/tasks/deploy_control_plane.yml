@@ -33,7 +33,7 @@
     state: present
     disable_rollback: true
     create_timeout: 10
-    template: "../cloudformation/c2s/control_plane.yaml"
+    template: "../cloudformation/control_plane.yaml"
     template_parameters:
       #ClusterName: "{{ ocp_cluster_name }}"
       InfrastructureName: "{{ infrastructure_id }}"
